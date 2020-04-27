@@ -1,0 +1,49 @@
+{
+    "manifestVersion": 1,
+    "id": "google-cloud-sdk-tasks",
+    "name": "Google Cloud SDK",
+    "version": "0.1.3",
+    "publisher": "laurensknoll",
+    "public": true,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Install Google Cloud SDK and run commands to manage GCP resources.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "Google Cloud SDK",
+        "gcloud",
+        "gsutil",
+        "bq",
+        "GCP"
+    ],
+    "icons": {
+        "default": "extension-icon.png",
+        "large": "extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "tasks/google-cloud-sdk-installer"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/laurensknoll/azure-devops-extensions/tree/master/google/google-cloud-sdk"
+    },
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/google-cloud-sdk-installer"
+            }
+        }
+    ]
+}
