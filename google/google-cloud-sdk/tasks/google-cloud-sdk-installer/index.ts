@@ -35,11 +35,11 @@ function getVersion(): string {
 
 async function install(version: string) {
     // Install
-    let toolPath = tools.findLocalTool('gcloud', version);
+    let toolPath = tools.findLocalTool('google-cloud-sdk', version);
 
     if (!toolPath) {
-        toolPath = await downloadGcloud(version);
-        tasks.debug("gcloud tool is cached under " + toolPath);
+        toolPath = await downloadCloudSDK(version);
+        tasks.debug("google-cloud-sdk tool is cached under " + toolPath);
     }
 
     toolPath = path.join(toolPath, 'bin');
@@ -50,19 +50,19 @@ function setConfigurationDirectory() {
     // Store tool configuration folder in job-specific folder.
     let configPath = tasks.getVariable("CLOUDSDK_CONFIG");
     if (configPath) {
-        console.log(`Reusing gcloud configuration directory: ${configPath} (from CLOUDSDK_CONFIG)`);
+        console.log(`Reusing google-cloud-sdk configuration directory: ${configPath} (from CLOUDSDK_CONFIG)`);
     } else {
         let tempPath = tasks.getVariable('Agent.TempDirectory');
         if (!tempPath) {
             throw new Error("Expected Agent.TempDirectory to be set");
         }
 
-        console.log(`Configured gcloud configuration directory: ${tempPath}`);
+        console.log(`Configured google-cloud-sdk configuration directory: ${tempPath}`);
         tasks.setVariable("CLOUDSDK_CONFIG", tempPath);
     }
 }
 
-async function downloadGcloud(version: string): Promise<string> {
+async function downloadCloudSDK(version: string): Promise<string> {
     let fileName = getFileName(version);
     let downloadUrl = getDownloadUrl(fileName);
 
@@ -83,7 +83,7 @@ async function downloadGcloud(version: string): Promise<string> {
     }
 
     let toolRoot = path.join(extPath, "google-cloud-sdk");
-    return await tools.cacheDir(toolRoot, 'gcloud', version);
+    return await tools.cacheDir(toolRoot, 'google-cloud-sdk', version);
 }
 
 // Note: Python is pre-installed on hosted agents, therefore 
