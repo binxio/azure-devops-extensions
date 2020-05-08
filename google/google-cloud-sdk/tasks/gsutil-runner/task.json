@@ -1,18 +1,18 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "b2d623e9-bbcc-4593-8042-7bbfdd38fd15",
-    "name": "GcloudRunner",
-    "friendlyName": "Run a custom gcloud command",
-    "description": "Execute gcloud commands to manage resources on Google Cloud Platform (GCP)",
+    "id": "934e4f88-45b2-436a-849e-5be0afef70d8",
+    "name": "GsutilRunner",
+    "friendlyName": "Run a custom gsutil command",
+    "description": "Execute gsutil commands to manage buckets and objects on Google Cloud Platform (GCP)",
     "helpMarkDown": "",
     "category": "Azure Pipelines",
     "author": "laurensknoll@binx.io",
     "version": {
         "Major": 0,
-        "Minor": 2,
-        "Patch": 1
+        "Minor": 1,
+        "Patch": 0
     },
-    "instanceNameFormat": "gcloud $(command)",
+    "instanceNameFormat": "gsutil $(command) $(arguments)",
     "groups": [
         {
             "displayName": "Advanced",
@@ -27,7 +27,7 @@
             "label": "command",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "The gcloud command to execute. For example, to execute 'gcloud run deploy', enter 'run deploy'"
+            "helpMarkDown": "The gsutil command to execute. For example, to execute 'gsutil cp', enter 'cp'"
         },
         {
             "name": "arguments",
@@ -35,7 +35,7 @@
             "label": "Arguments",
             "defaultValue": "",
             "required": false,
-            "helpMarkDown": "Optional arguments to the selected command. For example, to specify the project of the gcloud command add '--project project-id'"
+            "helpMarkDown": "Optional arguments for the command. For example, to specify the files to copy add '*.txt gs://my-bucket'"
         },
         {
             "name": "workingDirectory",
@@ -46,11 +46,18 @@
             "groupName": "advanced"
         },
         {
-            "name": "quiet",
-            "type": "boolean",
-            "label": "Quiet",
-            "defaultValue": true,
-            "helpMarkDown": "Disable all interactive prompts for this command. If input is required, defaults will be used, or an error will be raised.",
+            "name": "commandOptions",
+            "type": "string",
+            "label": "Command options",
+            "helpMarkDown": "Optional command options. For example, to specify the canned acl use '-a public-read'",
+            "required": false,
+            "groupName": "advanced"
+        },
+        {
+            "name": "toolOptions",
+            "type": "string",
+            "label": "Tool options",
+            "helpMarkDown": "Optional tool options to control behavior of gsutil that apply across commands. For example, to specify a HTTP header use '-h \"Cache-Control:public,max-age=3600\"'",
             "required": false,
             "groupName": "advanced"
         }

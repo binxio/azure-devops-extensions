@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "google-cloud-sdk-tasks",
-    "name": "Google Cloud SDK",
-    "version": "0.3.3",
+    "id": "google-cloud-sdk-tasks-dev",
+    "name": "Google Cloud SDK (Development)",
+    "version": "0.1.9",
     "publisher": "laurensknoll",
-    "public": true,
+    "public": false,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -14,21 +14,9 @@
     "categories": [
         "Azure Pipelines"
     ],
-    "tags": [
-        "Google Cloud SDK",
-        "gcloud",
-        "gsutil",
-        "bq",
-        "GCP"
-    ],
     "icons": {
         "default": "extension-icon.png",
         "large": "extension-icon.png"
-    },
-    "content": {
-        "details": {
-            "path": "overview.md"
-        }
     },
     "files": [
         {

@@ -16,5 +16,8 @@ endif
 init:
 	@npm ci
 
+release-dev: check init
+	@npx task release ${VENDOR} ${EXTENSION} vss-extension.dev.json
+
 release: check init
-	@npx task release ${VENDOR} ${EXTENSION} ${SOURCE_PATH}
+	@npx task release ${VENDOR} ${EXTENSION}
