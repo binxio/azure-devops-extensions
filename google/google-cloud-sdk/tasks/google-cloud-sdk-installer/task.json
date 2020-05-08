@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "4de9a119-e4d8-4723-a7e7-8621554a0e2d",
+    "id": "73b17ce6-3f7b-4549-88b2-7d89f395bf94",
     "name": "GoogleCloudSdkInstaller",
     "friendlyName": "Google Cloud SDK tool installer",
     "description": "Find in cache or download a specific version of Google Cloud SDK and add it to PATH",
@@ -9,7 +9,7 @@
     "author": "laurensknoll@binx.io",
     "version": {
         "Major": 0,
-        "Minor": 2,
+        "Minor": 3,
         "Patch": 0
     },
     "minimumAgentVersion": "2.115.0",
