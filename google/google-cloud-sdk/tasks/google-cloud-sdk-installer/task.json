@@ -10,7 +10,7 @@
     "version": {
         "Major": 0,
         "Minor": 1,
-        "Patch": 0
+        "Patch": 1
     },
     "minimumAgentVersion": "2.115.0",
     "instanceNameFormat": "Install Google Cloud SDK $(version)",
@@ -19,7 +19,7 @@
             "name": "version",
             "type": "string",
             "label": "Version",
-            "defaultValue": "289.0.0",
+            "defaultValue": "291.0.0",
             "required": true,
             "helpMarkDown": "The version of Google Cloud SDK which should be installed on the agent if not already present"
         }

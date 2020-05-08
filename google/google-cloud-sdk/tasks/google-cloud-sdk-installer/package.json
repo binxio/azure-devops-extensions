@@ -1,7 +1,7 @@
 {
   "name": "google-cloud-sdk-tool-installer",
   "version": "1.0.0",
-  "description": "Google Cloud SDK tool installer task",
+  "description": "Azure Pipelines Google Cloud SDK tool installer task",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
