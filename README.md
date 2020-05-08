@@ -14,3 +14,7 @@ Release using the tasksfile-script:
 
     npm ci
     npx task release VENDOR EXTENSION
+
+Or use Make:
+
+    make release VENDOR=vendor EXTENSION=extension
