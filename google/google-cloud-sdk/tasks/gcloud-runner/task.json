@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "eb5496f3-7f30-447a-95d7-23c124748703",
+    "id": "b2d623e9-bbcc-4593-8042-7bbfdd38fd15",
     "name": "GcloudRunner",
     "friendlyName": "Run a custom gcloud command",
     "description": "Execute gcloud commands to manage resources on Google Cloud Platform (GCP)",
@@ -9,8 +9,8 @@
     "author": "laurensknoll@binx.io",
     "version": {
         "Major": 0,
-        "Minor": 1,
-        "Patch": 1
+        "Minor": 2,
+        "Patch": 0
     },
     "instanceNameFormat": "gcloud $(command)",
     "groups": [
@@ -42,6 +42,15 @@
             "type": "filePath",
             "label": "Working directory",
             "helpMarkDown": "The working directory where the command will run. When empty, the root of the repository (for builds) or artifacts (for releases) is used, which is the value of '$(System.DefaultWorkingDirectory)'.",
+            "required": false,
+            "groupName": "advanced"
+        },
+        {
+            "name": "quiet",
+            "type": "boolean",
+            "label": "Quiet",
+            "defaultValue": true,
+            "helpMarkDown": "Disable all interactive prompts for this command. If input is required, defaults will be used, or an error will be raised.",
             "required": false,
             "groupName": "advanced"
         }

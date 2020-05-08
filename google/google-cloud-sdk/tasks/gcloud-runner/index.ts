@@ -5,6 +5,7 @@ async function run() {
     let command = tasks.getInput("command", true)!;
     let argument = tasks.getInput("arguments", false);
     let workingDir = tasks.getInput("workingDirectory", false);
+    let quiet = tasks.getBoolInput("quiet", false);
 
     let toolPath = tasks.which("gcloud", true)!;
     let toolRunner : tools.ToolRunner = tasks.tool(toolPath);
@@ -14,6 +15,10 @@ async function run() {
 
     if (argument) {
         toolRunner.line(argument);
+    }
+
+    if (quiet) {
+        toolRunner.arg("--quiet");
     }
 
     return await toolRunner.exec(<tools.IExecOptions>{
