@@ -36,6 +36,9 @@
         },
         {
             "path": "tasks/gcloud-runner"
+        },
+        {
+            "path": "tasks/gsutil-runner"
         }
     ],
     "repository": {
@@ -61,6 +64,16 @@
             ],
             "properties": {
                 "name": "tasks/gcloud-runner"
+            }
+        },
+        {
+            "id": "gsutil-runner",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/gsutil-runner"
             }
         }
     ]

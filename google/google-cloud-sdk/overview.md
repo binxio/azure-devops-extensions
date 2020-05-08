@@ -8,6 +8,7 @@ This extension contains the following contributions:
 
 * Google Cloud SDK tool installer - for installing Google Cloud SDK if not installed on the build agent
 * gcloud runner - for executing gcloud commands
+* gsutil runner - for executing gsutil commands
 
 The tasks are capable of running on the following build agent operating systems:
 
