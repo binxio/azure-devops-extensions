@@ -4,14 +4,9 @@ import * as os from 'os';
 import * as path from 'path';
 
 async function run() {
-    try {
-        let version = getVersion();
-        await install(version);
-        setConfigurationDirectory();
-    }
-    catch (err) {
-        tasks.setResult(tasks.TaskResult.Failed, err);
-    }
+    let version = getVersion();
+    await install(version);
+    setConfigurationDirectory();
 }
 
 // This function is required to convert the version 1.10 to 1.10.0.
@@ -130,4 +125,4 @@ function getDownloadUrl(filename: string): string {
     return `https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${filename}`;
 }
 
-run();
+run().catch(reason => tasks.setResult(tasks.TaskResult.Failed, reason));
