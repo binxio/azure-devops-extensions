@@ -1,0 +1,68 @@
+{
+    "manifestVersion": 1,
+    "id": "google-cloud-sdk-tasks-dev",
+    "name": "Google Cloud SDK (Development)",
+    "version": "0.1.9",
+    "publisher": "laurensknoll",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Install Google Cloud SDK and run commands to manage GCP resources.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "extension-icon.png",
+        "large": "extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "tasks/google-cloud-sdk-installer"
+        },
+        {
+            "path": "tasks/gcloud-runner"
+        },
+        {
+            "path": "tasks/gsutil-runner"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/laurensknoll/azure-devops-extensions/tree/master/google/google-cloud-sdk"
+    },
+    "contributions": [
+        {
+            "id": "google-cloud-sdk-installer",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/google-cloud-sdk-installer"
+            }
+        },
+        {
+            "id": "gcloud-runner",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/gcloud-runner"
+            }
+        },
+        {
+            "id": "gsutil-runner",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/gsutil-runner"
+            }
+        }
+    ]
+}
