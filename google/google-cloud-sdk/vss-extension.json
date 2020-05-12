@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "google-cloud-sdk-tasks",
     "name": "Google Cloud SDK",
-    "version": "0.3.5",
+    "version": "0.3.10",
     "publisher": "laurensknoll",
     "public": true,
     "targets": [
@@ -32,6 +32,9 @@
     },
     "files": [
         {
+            "path": "tasks/google-cloud-sdk-installer2"
+        },
+        {
             "path": "tasks/google-cloud-sdk-installer"
         },
         {
@@ -48,6 +51,16 @@
     "contributions": [
         {
             "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/google-cloud-sdk-installer2"
+            }
+        },
+        {
+            "id": "google-cloud-sdk-installer",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
