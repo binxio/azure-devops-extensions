@@ -10,6 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "tasksfile": "^5.1.1",
-    "tfx-cli": "^0.7.11"
+    "tfx-cli": "^0.8.1"
   }
 }
