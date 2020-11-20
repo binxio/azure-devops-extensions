@@ -1,3 +1,5 @@
+Read the blog [Google Cloud SDK Installer for Azure Pipelines](Google Cloud SDK Installer for Azure Pipelines) for details
+
 # Azure DevOps Extensions
 
 This project implements Azure DevOps extensions such as Tool installers and so forth.
