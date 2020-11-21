@@ -2,7 +2,7 @@
 
 This project implements Azure DevOps extensions for Google Cloud Platform.
 
-Read[Creating a Google Cloud SDK Installer for Azure Pipelines](https://binx.io/blog/2020/04/28/creating-a-google-cloud-sdk-installer-for-azure-pipelines/) for details.
+Read [Creating a Google Cloud SDK Installer for Azure Pipelines](https://binx.io/blog/2020/04/28/creating-a-google-cloud-sdk-installer-for-azure-pipelines/) for details.
 
 ## Structure
 
