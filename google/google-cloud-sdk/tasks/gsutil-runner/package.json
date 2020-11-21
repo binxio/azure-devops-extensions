@@ -11,7 +11,7 @@
     "gsutil"
   ],
   "author": "laurensknoll@binx.io",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "azure-pipelines-task-lib": "^2.10.0"
   },
