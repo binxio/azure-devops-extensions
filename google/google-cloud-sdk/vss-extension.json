@@ -30,6 +30,14 @@
             "path": "overview.md"
         }
     },
+    "links": {
+        "license": {
+            "uri": "https://github.com/binxio/azure-devops-extensions/blob/master/google/google-cloud-sdk/LICENSE"
+        },
+        "support": {
+            "uri": "https://github.com/binxio/azure-devops-extensions/tree/master/google/google-cloud-sdk"
+        }
+    },
     "files": [
         {
             "path": "tasks/google-cloud-sdk-installer"

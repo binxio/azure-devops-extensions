@@ -16,6 +16,16 @@ The tasks are capable of running on the following build agent operating systems:
 * MacOS
 * Linux
 
+## Learn
+
+### Using the extension
+
+* Blog: [Using Google Service Accounts In Azure Pipelines](https://binx.io/blog/2020/05/08/using-google-service-accounts-in-azure-pipelines/)
+
+## Understanding the implementation
+
+* Blog: [https://binx.io/blog/2020/04/28/creating-a-google-cloud-sdk-installer-for-azure-pipelines/](https://binx.io/blog/2020/04/28/creating-a-google-cloud-sdk-installer-for-azure-pipelines/)
+
 ## Contact Information
 
 Please report any problem or feedback at [GitHub](https://github.com/binxio/azure-devops-extensions/tree/master/google/google-cloud-sdk).

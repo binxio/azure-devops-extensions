@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "google-cloud-sdk-tasks-dev",
     "name": "Google Cloud SDK (Development)",
-    "version": "0.1.11",
+    "version": "0.1.13",
     "publisher": "laurensknoll",
     "public": false,
     "targets": [
@@ -17,6 +17,19 @@
     "icons": {
         "default": "extension-icon.png",
         "large": "extension-icon.png"
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "links": {
+        "license": {
+            "uri": "https://github.com/binxio/azure-devops-extensions/blob/master/google/google-cloud-sdk/LICENSE"
+        },
+        "support": {
+            "uri": "https://github.com/binxio/azure-devops-extensions/tree/master/google/google-cloud-sdk"
+        }
     },
     "files": [
         {
