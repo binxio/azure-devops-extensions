@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "google-cloud-sdk-tasks",
     "name": "Google Cloud SDK",
-    "version": "0.3.14",
+    "version": "0.3.15",
     "publisher": "laurensknoll",
     "public": true,
     "targets": [
@@ -28,6 +28,14 @@
     "content": {
         "details": {
             "path": "overview.md"
+        }
+    },
+    "links": {
+        "license": {
+            "uri": "https://github.com/binxio/azure-devops-extensions/blob/master/google/google-cloud-sdk/LICENSE"
+        },
+        "support": {
+            "uri": "https://github.com/binxio/azure-devops-extensions/tree/master/google/google-cloud-sdk"
         }
     },
     "files": [
