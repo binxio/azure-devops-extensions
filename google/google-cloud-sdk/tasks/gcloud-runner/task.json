@@ -9,7 +9,7 @@
     "author": "laurensknoll@binx.io",
     "version": {
         "Major": 0,
-        "Minor": 3,
+        "Minor": 4,
         "Patch": 0
     },
     "instanceNameFormat": "gcloud $(command)",
@@ -56,7 +56,7 @@
         }
     ],
     "execution": {
-        "Node": {
+        "Node10": {
             "target": "index.js"
         }
     }

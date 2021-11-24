@@ -64,7 +64,7 @@ async function downloadCloudSDK(version: string): Promise<string> {
     let downloadPath;
     try {
         downloadPath = await tools.downloadTool(downloadUrl);
-    } catch (error) {
+    } catch (error: any) {
         tasks.debug(error);
         throw `Failed to download version ${version}. Please verify that the version is valid and resolve any other issues. ${error}`;
     }
