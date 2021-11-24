@@ -9,7 +9,7 @@
     "author": "laurensknoll@binx.io",
     "version": {
         "Major": 0,
-        "Minor": 5,
+        "Minor": 6,
         "Patch": 0
     },
     "minimumAgentVersion": "2.115.0",
