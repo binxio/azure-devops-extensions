@@ -1,0 +1,45 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "f2c031c2-5408-4a94-8af7-8cc30de1ead2",
+    "name": "GcpWifAuth",
+    "friendlyName": "Authenticate to Google",
+    "description": "Authenticates to Google Cloud Platform (GCP) using Workload Identity Federation",
+    "helpMarkDown": "",
+    "category": "Azure Pipelines",
+    "author": "laurensknoll@binx.io",
+    "version": {
+        "Major": 0,
+        "Minor": 2,
+        "Patch": 0
+    },
+    "instanceNameFormat": "",
+    "inputs": [
+        {
+            "name": "connectedServiceId",
+            "type": "connectedService:gcpWifEndpoint",
+            "label": "Service connection",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The Google Cloud (WIF) service connection to use"
+        },
+        {
+            "name": "serviceAccount",
+            "type": "string",
+            "label": "Google Cloud service account email address for which to generate credentials",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "The specified service account overrides the default service account configured in the service connection."
+        }
+    ],
+    "outputVariables": [
+        {
+            "name": "credentialsFilePath",
+            "description": "Full path to the credentials file created."
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}

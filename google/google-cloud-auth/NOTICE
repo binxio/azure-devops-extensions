@@ -1,0 +1,7 @@
+Google Cloud Auth Tasks Extension for Azure DevOps
+
+Copyright 2024 Binx.io B.V.
+
+This product is inspired by software (https://github.com/google-github-actions/auth/tree/main) developed by Google, licensed under the Apache License.
+
+This product contains software (https://github.com/microsoft/azure-pipelines-task-lib, https://github.com/microsoft/azure-devops-node-api) developed by Microsoft Corporation, licensed under the MIT License.
