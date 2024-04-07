@@ -15,17 +15,26 @@ The tasks are capable of running on the following build agent operating systems:
 * MacOS
 * Linux
 
+
 ## Learn
 
 ### Using the extension
 
 1. Configure Google Cloud Workload Identity Federation for Azure DevOps
 
+* Blog: [How to configure Google Cloud Workload Identity Federation for Azure DevOps](https://xebia.com/blog/how-to-configure-google-cloud-workload-identity-federation-for-azure-devops)
 * Terraform example: [gcp-workload-identity-federation-azure-devops-example](https://github.com/binxio/gcp-workload-identity-federation-azure-devops-example/tree/main/terraform)
 
 2. Setup Azure DevOps Pipeline
 
+* Blog: [Keyless Google Cloud deployments from Azure Pipelines](https://xebia.com/blog/keyless-google-cloud-deployments-from-azure-pipelines)
 * YAML example: [gcp-workload-identity-federation-azure-devops-example](https://github.com/binxio/gcp-workload-identity-federation-azure-devops-example/tree/main/azure-pipelines)
+
+
+## Understanding the implementation
+
+* Source: [google-cloud-auth](https://github.com/binxio/azure-devops-extensions/tree/master/google/google-cloud-auth)
+
 
 ## Contact Information
 
