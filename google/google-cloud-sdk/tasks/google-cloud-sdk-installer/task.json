@@ -9,10 +9,9 @@
     "author": "laurensknoll@binx.io",
     "version": {
         "Major": 0,
-        "Minor": 6,
+        "Minor": 8,
         "Patch": 0
     },
-    "minimumAgentVersion": "2.115.0",
     "instanceNameFormat": "Install Google Cloud SDK $(version)",
     "inputs": [
         {
@@ -24,8 +23,15 @@
             "helpMarkDown": "The version of Google Cloud SDK which should be installed on the agent if not already present"
         }
     ],
+    "minimumAgentVersion": "2.144.0",
     "execution": {
         "Node10": {
+            "target": "index.js"
+        },
+        "Node16": {
+            "target": "index.js"
+        },
+        "Node20_1": {
             "target": "index.js"
         }
     }

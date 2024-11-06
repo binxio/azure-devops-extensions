@@ -1,4 +1,4 @@
-import https from "https";
+import * as https from "https";
 
 async function run(): Promise<string> {
   const uri = "##URL##";

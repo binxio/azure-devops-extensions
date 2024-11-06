@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "google-cloud-auth-tasks",
     "name": "Google Cloud Auth",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "laurensknoll",
     "public": true,
     "targets": [
