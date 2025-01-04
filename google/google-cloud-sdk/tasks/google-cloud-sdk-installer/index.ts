@@ -112,6 +112,10 @@ function getFileName(version: string): string {
         case "x32":
             architecture = "x86";
             break;
+
+        case "arm64":
+            architecture = "arm";
+            break;
         
         default:
             throw `Architecture ${os.arch()} is not supported`;
